@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>habit flow-website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="splash">
+<img id="logo" src="images/logo.jpg" alt="HabitFlow Logo">
+
+    <h1>HabitFlow</h1>
+
+    <p>Build Better Habits</p>
+
+</div>
+<div id="onboarding" style="display:none;">
+
+    <img id="splashImage" src="Images/splash1.jpg">
+
+    <button id="getStartedBtn">Get Started
+
+    </button>
+
+
+</div>
+    <div class="container">
+
+   
+    <main class="main">
+
+        <header class="header" id="dashboard">
+
+    <div>
+
+        <h1>Dashboard</h1>
+
+        <p>Build better habits every day.</p>
+        <p id="currentDate"></p>
+
+    </div>
+
+    <div class="profile">
+
+        👤
+
+    </div>
+
+</header>
+<section class="cards">
+
+    <div class="card">
+        <h3>Total Habits</h3>
+        <p id="totalHabits">0</p>
+    </div>
+<div class="card">
+
+    <h3>Today's Progress</h3>
+
+    <div class="progress-ring">
+
+        <svg width="120" height="120">
+
+            <circle
+                class="bg"
+                cx="60"
+                cy="60"
+                r="50">
+            </circle>
+
+            <circle
+                id="progressCircle"
+                class="progress"
+                cx="60"
+                cy="60"
+                r="50">
+            </circle>
+
+        </svg>
+
+        <div id="todayProgress" class="progress-text">
+            0%
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="card">
+        <h3>Monthly Progress</h3>
+        <p id="monthlyProgress">0%</p>
+    </div>
+
+    <div class="card">
+        <h3>Current Streak</h3>
+        <p id="currentStreak">0</p>
+    </div>
+
+</section>
+<section class="habit-section" id="habitSection">
+
+    <div class="section-header">
+
+    <h2>Habit Tracker</h2>
+
+    <div>
+
+        <input
+            type="text"
+            id="searchHabit"
+            placeholder="🔍 Search Habit">
+            <select id="monthSelector">
+
+<option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+
+</select>
+
+        <button id="addHabitBtn">
+            + Add Habit
+        </button>
+
+    </div>
+
+</div>
+
+    <div class="habit-container">
+        <table>
+
+    <thead>
+
+        <tr>
+
+            <th>Habit</th>
+            <th>Target</th>
+            <th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+<th>19</th>
+<th>20</th>
+<th>21</th>
+<th>22</th>
+<th>23</th>
+<th>24</th>
+<th>25</th>
+<th>26</th>
+<th>27</th>
+<th>28</th>
+<th>29</th>
+<th>30</th>
+<th>31</th>
+
+            <th>Progress</th>
+            <th>Delete</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="habitBody">
+
+    </tbody>
+
+</table>
+
+    </div>
+
+</section>
+<section class="achievement-section">
+
+    <h2>🏆 Achievements</h2>
+
+    <div class="achievement-grid">
+
+        <div class="achievement locked" id="badge1">
+            🌱
+            <h3>First Step</h3>
+            <p>Complete your first habit</p>
+        </div>
+
+        <div class="achievement locked" id="badge2">
+            🔥
+            <h3>7 Day Streak</h3>
+            <p>Complete 7 habit days</p>
+        </div>
+
+        <div class="achievement locked" id="badge3">
+            ⭐
+            <h3>Habit Master</h3>
+            <p>Complete 15 habit days</p>
+        </div>
+
+        <div class="achievement locked" id="badge4">
+            👑
+            <h3>Consistency King</h3>
+            <p>Complete 30 habit days</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="notes-section" id="notesSection">
+
+    <h2>📝 Notes</h2>
+
+    <textarea
+        id="notes"
+        placeholder="Write your notes here...">
+    </textarea>
+
+</section>
+
+    </main>
+
+<script src="script.js"></script>
+</body>
+
+</html>
